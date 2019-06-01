@@ -3,4 +3,6 @@ from Scraper.ScraperRT import ScraperRT
 
 a = ScraperRT()
 
-a.test()
+currency = a.extract_EUR_USD_Bid_Ask()
+
+print(currency)
