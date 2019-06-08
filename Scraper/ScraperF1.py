@@ -23,8 +23,8 @@ class ScraperF1:
             self.driver.quit()
             raise Exception("String conversion to decimal failed EUR:" + self.get_EUR_bid().strip() + "USD:" + self.get_USD_Bid().strip())
 
-        self.bid_ask["EUR"] = EUR
-        self.bid_ask["USD"] = USD
+        self.bid_ask["EUR"] = str(EUR)
+        self.bid_ask["USD"] = str(USD)
 
         self.driver.quit()
 

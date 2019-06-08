@@ -19,8 +19,8 @@ class ScraperRT:
         except:
             raise Exception("String conversion to decimal failed EUR:" + self.get_EUR_bid(bids).strip() + "USD:" + self.get_USD_Bid(bids).strip())
 
-        self.bid_ask["EUR"] = EUR
-        self.bid_ask["USD"] = USD
+        self.bid_ask["EUR"] = str(EUR)
+        self.bid_ask["USD"] = str(USD)
 
         return self.bid_ask
 
