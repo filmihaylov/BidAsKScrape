@@ -30,7 +30,12 @@ def hello():
 
     cur = db.get_last_bid_ask()
 
-    return str(cur)bid_ask_value
+    response = app.response_class(
+        response=json.dumps(cur),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 
 
