@@ -31,7 +31,7 @@ class DbOperations():
     def delete_old_data(self):
         with sqlite3.connect(db_filename) as conn:
             cursor = conn.cursor()
-            cursor.execute("delete from bid_ask")
+            cursor.execute("delete from bid_ask where timestamp < date('now','-5 days');")
 
     def get_last_bid_ask(self):
         with sqlite3.connect(db_filename) as conn:
