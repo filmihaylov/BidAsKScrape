@@ -1,3 +1,10 @@
 {
-    "python.pythonPath": "/home/liberty/Projects/WebBidAsk/ScraperBidAsk/bin/python3"
+    "python.pythonPath": "/home/liberty/Projects/WebBidAsk/ScraperBidAsk/bin/python3",
+    "sqltools.connections": [
+        {
+            "database": "./bid_ask.db",
+            "dialect": "SQLite",
+            "name": "saf"
+        }
+    ]
 }
