@@ -33,6 +33,11 @@ class DbOperations():
             cursor = conn.cursor()
             cursor.execute("delete from bid_ask where timestamp < date('now','-5 days');")
 
+    def delete_all(self):
+        with sqlite3.connect(db_filename) as conn:
+            cursor = conn.cursor()
+            cursor.execute("delete from bid_ask")
+
     def get_last_bid_ask(self):
         with sqlite3.connect(db_filename) as conn:
             cursor = conn.cursor()
